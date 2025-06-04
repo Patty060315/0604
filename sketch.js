@@ -46,12 +46,20 @@ function setup() {
 
 function draw() {
   background(220);
+
   Engine.update(engine);
   strokeWeight(2);
   stroke(0);
   
   // Draw the webcam video
   image(video, 0, 0, width, height);
+
+  // 顯示標題（移到這裡）
+  textAlign(CENTER, TOP);
+  textSize(32);
+  fill(50, 50, 120);
+  noStroke();
+  text("淡江教育科技系", width / 2, 20);
   
   if (random() < 0.1) {
     circles.push(new Circle());
